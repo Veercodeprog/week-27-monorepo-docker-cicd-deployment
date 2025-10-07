@@ -20,6 +20,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.ws
+          file: ./docker/Dockerfile.websocket
           push: true
           tags: vpst/todo-app-websocket:${{ github.sha }}
