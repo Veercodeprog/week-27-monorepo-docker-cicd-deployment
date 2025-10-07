@@ -23,5 +23,6 @@ jobs:
           file: ./docker/Dockerfile.frontend
           build_args:
             - DATABASE_URL=${{ secrets.DATABASE_URL }}
+
           push: true
           tags: vpst/todo-app-frontend:${{ github.sha }}
