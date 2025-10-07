@@ -21,7 +21,7 @@ COPY . .
 RUN bun install
 #nextjs project docker file becomes tricky when nextjs needs to talk to the db during build phase
 RUN bun run db:generate
-RUN DB_URL=$DB_URL bunx turbo build --filter=web...
+RUN DB_URL=$DB_URL bun run build
 
 EXPOSE 3000
 
